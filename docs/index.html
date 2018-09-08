@@ -50,6 +50,22 @@ body, html {
 </head>
 
 <body>  
+	
+	<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#calc" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Sick Day Calculator</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+	
+	
   <?php
     // define variables and set to empty values
     $age =;
@@ -60,6 +76,40 @@ body, html {
   <div class="header">
     <h2 style="color:white;">Forecasting Sick Days</h2>
   </div>
+	
+	<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">About Sick Day Forecast</h3>
+  <p>We have created </p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
+      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+	  
+
+  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+  <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+  </div>
+</div>
+
+
+<!-- style-->
+<span class="w3-xxlarge w3-text-white w3-wide">Sick Day Calculator</span>
+      <div class="header">
+    <h2 style="color:white;">Forecasting Sick Days</h2>
+  </div>
+	<div class="w3-content w3-container w3-padding-64" id="calc">
   <div class = "body">
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>  
       <br><br>
@@ -130,4 +180,5 @@ body, html {
       <br><br>
     </form>
   </div>
+	</div>
 </html>
