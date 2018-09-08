@@ -16,7 +16,6 @@ body, html {
     text-align: center;
     background-color: #eeeeee;
 }
-
 /* Create a Parallax Effect */
 .bgimg-1 {
     background-attachment: fixed;
@@ -24,23 +23,19 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 /* First image (Logo. Full height) */
 .bgimg-1 {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Star_of_life2.svg/220px-Star_of_life2.svg');
     min-height: 100%;
 }
-
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
-
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3 {
         background-attachment: scroll;
     }
 }
-
   /* Style the header */
   .header {
     background-color: #0000BB;
@@ -62,9 +57,9 @@ body, html {
     <h2 style="color:#eeeeee;"><font size="10"><b>Forecasting Hospital Stays</b></font></h2>
   </div>
   <div class = "body" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Star_of_life2.svg/220px-Star_of_life2.svg'); background-repeat: no-repeat; background-position:center">
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>  
+    <form method="post" action="<?php echo($age,$sex,$condition);?>">
       <br><br>
-      Age: <select>
+      Age: <select name="age">
         <option value=0>Decline to State</option>
         <option value=1>Under 1</option>
         <option value=2>1-4</option>
@@ -79,12 +74,12 @@ body, html {
 	<option value=11>75-84</option>
         <option value=12>85+</option>
       </select>
-      &nbsp;&nbsp;&nbsp;Sex: <select>
+      &nbsp;&nbsp;&nbsp;Sex: <select name="sex">
         <option value="0">Other or Decline to State</option>
         <option value="1">Male</option>
         <option value="2">Female</option>
       </select>
-      &nbsp;&nbsp;&nbsp;Condition: <select>
+      &nbsp;&nbsp;&nbsp;Condition: <select name="condition">
         <option value=0>Other or Decline to State</option>
         <option value=1>Anemia</option>
         <option value=2>Appendicitis</option>
@@ -137,5 +132,17 @@ body, html {
       <br><br>
       <br><br>
     </form>
+    <?php 
+      if(True)
+      {
+        $age = $_POST['age'];
+        $sex = $_POST['sex'];
+        $condition = $_POST['condition'];
+      }
+      if(isset($_POST['submit']))
+      {
+        echo($age,$sex,$condition);
+      }
+    ?>
   </div>
 </html>
