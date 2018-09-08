@@ -11,8 +11,10 @@
 	  body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
     height: 100%;
-    color: #777;
+    color: #000000;
     line-height: 1.8;
+    text-align: center;
+    background-color: #eeeeee;
 }
 
 /* Create a Parallax Effect */
@@ -25,10 +27,9 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Star_of_life2.svg/220px-Star_of_life2.svg.png');
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Star_of_life2.svg/220px-Star_of_life2.svg');
     min-height: 100%;
 }
-
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
@@ -42,7 +43,7 @@ body, html {
 
   /* Style the header */
   .header {
-    background-color: #00276f;
+    background-color: #0000BB;
     padding: 20px;
     text-align: center;
   }
@@ -58,9 +59,9 @@ body, html {
   ?>
 
   <div class="header">
-    <h2 style="color:white;">Forecasting Sick Days</h2>
+    <h2 style="color:#eeeeee;"><font size="10"><b>Forecasting Hospital Stays</b></font></h2>
   </div>
-  <div class = "body">
+  <div class = "body" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Star_of_life2.svg/220px-Star_of_life2.svg'); background-repeat: no-repeat; background-position:center">
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>  
       <br><br>
       Age: <select>
@@ -77,6 +78,11 @@ body, html {
         <option value=10>65-74</option>
 	<option value=11>75-84</option>
         <option value=12>85+</option>
+      </select>
+      Sex: <select>
+        <option value="0">Other or Decline to State</option>
+        <option value="1">Male</option>
+        <option value="2">Female</option>
       </select>
       Condition: <select>
         <option value=0>Other or Decline to State</option>
@@ -120,13 +126,15 @@ body, html {
         <option value=38>Tumor, malignant, lung</option>
         <option value=39>Urinary tract infection</option>
       </select>
-      Sex:<select>
-        <option value="0">Other or Decline to State</option>
-        <option value="1">Male</option>
-        <option value="2">Female</option>
-      </select>
       <br><br>
-      <input type="submit" name="submit" value="Submit">  
+      <input type="submit" name="submit" value="Submit">
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
       <br><br>
     </form>
   </div>
