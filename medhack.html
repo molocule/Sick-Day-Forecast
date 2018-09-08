@@ -1,0 +1,91 @@
+
+<!DOCTYPE HTML>  
+<html>
+<head>
+
+	<style>
+		body {
+		  margin: 0;
+		  text-align: center;
+		}
+
+		/* Style the header */
+		.header {
+		    background-color: #f1f1f1;
+		    padding: 20px;
+		    text-align: center;
+		}
+
+		.rand {
+			color: white;
+		}
+	</style>
+</head>
+<body>  
+
+
+
+<?php
+// define variables and set to empty values
+$name = $age = $gender = $condition = $website = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = test_input($_POST["name"]);
+  $age = test_input($_POST["age"]);
+  $website = test_input($_POST["website"]);
+  $condition = test_input($_POST["condition"]);
+  $gender = test_input($_POST["gender"]);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+<div class="header">
+<h2>Forecasting Sick Days</h2>
+</div>
+
+<div class = "body">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>  
+  Name: <input type="text" name="name">
+  <br><br>
+  Age: <input type="text" name="age">
+  <br><br>
+  Website: <input type="text" name="website">
+  <br><br>
+  Condition: <select>
+  <option value="heart">Heart Attack</option>
+  <option value="preg">Pregnant</option>
+  <option value="ded">Obesity</option>
+  <option value="idk">gallstones</option>
+</select>
+  <br><br>
+  Gender:
+  <input type="radio" name="gender" value="female">Female
+  <input type="radio" name="gender" value="male">Male
+  <input type="radio" name="gender" value="other">Other
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
+</div>
+
+<div class = "rand">
+<?php
+echo "<h2>Your Input:</h2>";
+echo $name;
+echo "<br>";
+echo $age;
+echo "<br>";
+echo $website;
+echo "<br>";
+echo $condition;
+echo "<br>";
+echo $gender;
+?>
+</div>
+
+</body>
+</html>
