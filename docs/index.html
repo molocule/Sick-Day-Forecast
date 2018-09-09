@@ -9,22 +9,21 @@
   <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
     body, html {
-      height: 100%;
       color: #000000;
       text-align: center;
-      background-color: #eeeeee;
+      background-color: #eeffff;
     }
     /* Style the header */
     .header {
       background-color: #0000BB;
-      padding: 20px;
+      padding: 5px;
       text-align: center;
     }
   </style>
 </head>
 <body>  
   <div class="header">
-    <h2 style="color:#eeeeee;"><font size="10"><b>Forecasting Hospital Stays</b></font></h2>
+    <h2 style="color:#eeeeee;"><font size="10"><b>How long will my hospital stay last?</b></font></h2>
   </div>
   <div class = "body" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Star_of_life2.svg/220px-Star_of_life2.svg'); background-repeat: no-repeat; background-position:center">
     <form id = "test" method="post" onsubmit="event.preventDefault(); myFunction();">
@@ -49,7 +48,8 @@
         <option value="1">Male</option>
         <option value="2">Female</option>
       </select>
-      &nbsp;&nbsp;&nbsp;Condition: <select name="condition">
+      <br><br>
+      Condition: <select name="condition">
         <option value=0>Other or Decline to State</option>
         <option value=1>Anemia</option>
         <option value=2>Appendicitis</option>
@@ -93,7 +93,7 @@
       </select>
       <br><br>
       <input type="submit" name="submit" value="Submit">
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </form>
     <font size = "2"><b>Please note</b> that these 95% confidence intervals are extrapolated from the National Hospital Discharge Survey and are meant to inform, not to serve as medical advice.</font>
     <br><br><br><br>
